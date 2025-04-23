@@ -13,8 +13,8 @@ export default function Home() {
   };
 
   return (
-    <Container>
-      <Typography variant="h4" align="center" sx={{ my: 4 }}>
+    <Container sx={{ my: 4 }}>
+      <Typography variant="h4" align="center" sx={{ mb: 4 }}>
         Banking Dashboard
       </Typography>
       <CustomerForm onCustomerCreated={handleCustomerCreated} />
