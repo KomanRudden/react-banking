@@ -19,6 +19,18 @@ export default function Navbar() {
     }
   };
 
+  const handleGoToTransfers = () => {
+    if (customerId) {
+      router.push(`/transfers/${customerId}`);
+    }
+  };
+
+  const handleGoToBankZBalances = () => {
+    if (customerId) {
+      router.push(`/bankz-balances/${customerId}`);
+    }
+  };
+
   return (
     <AppBar position="static">
       <Toolbar>
@@ -43,6 +55,12 @@ export default function Navbar() {
           />
           <Button color="inherit" onClick={handleGoToTransactions} disabled={!customerId}>
             Transactions
+          </Button>
+          <Button color="inherit" onClick={handleGoToTransfers} disabled={!customerId}>
+            Transfers
+          </Button>
+          <Button color="inherit" onClick={handleGoToBankZBalances} disabled={!customerId}>
+            Bank Z Balances
           </Button>
         </Box>
       </Toolbar>
